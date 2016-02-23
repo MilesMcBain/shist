@@ -7,16 +7,15 @@
 #'
 #' @param x a vector of values to plot in a histogram.
 #'
-#' @param bin_step an optional number that defines the size of the increments on the bin width slider.
-#' If left unspecified a whole number step size is derived from the data using an unspecified algorithm.
+#' @param bin_step an optional number that defines the size of the increments on the bin width slider.If left unspecified a whole number step size is derived from the data using an unspecified algorithm.
 #'
-#' @import magrittr
 #' @import dplyr
 #' @import ggvis
 #'
 #' @export
 
-shist <- function(x, bin_step=NA) {
+shist <- function(x,
+                  bin_step=NA) {
   #Check format
   if(!is.vector(x)){
     stop("data must be a vector")
@@ -36,8 +35,11 @@ shist <- function(x, bin_step=NA) {
   #Plot
   dplyr::data_frame(var = x) %>%
       ggvis::ggvis(~var) %>%
-      ggvis::layer_histograms(width =  ggvis::input_slider(min=s_min, max=s_max, step = s_delta, label = "Bin Width"))
-}
+      ggvis::layer_histograms(width = ggvis::input_slider(min=s_min,
+                                                          max=s_max,
+                                                          step = s_delta,
+                                                          label = "Bin Width"))
+} # end function
 
 #' choose_bin_width
 #'
