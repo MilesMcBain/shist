@@ -21,6 +21,13 @@ shist <- function(x, bin_step=NA) {
   if(!is.vector(x)){
     stop("data must be a vector")
   }
+  #handle NA's. ggvis doesn't currently handle them, so I'll just filter out for you.
+  NAs = is.na(x)
+  if( length(NAs) > 0){
+  x <- x[!NAs]
+  warning(paste0("shist ignored ", length(NAs), " NAs for you. Please come again."))
+  }
+
 
   #Choose bin increments
   s_max <- max(x, na.rm = T)
