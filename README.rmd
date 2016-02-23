@@ -8,7 +8,6 @@ output:
 ---
 
 #It's the shist
-
 Plot first, tweak parameters later. `shist()` is the simple, quick to type shifting histogram you deserve. This is a simple wrapper for functionality available in Hadley's `ggvis` package. 
 
 
@@ -21,4 +20,7 @@ shist(trees$Girth)
 #It can be overidden:
 shist(trees$Girth, bin_step = 1)
 ```
+
+#Get the shist
+```devtools::install_github("milesmcbain/ggmissing")```
 

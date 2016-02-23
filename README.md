@@ -12,3 +12,8 @@ shist(trees$Girth)
 #It can be overidden:
 shist(trees$Girth, bin_step = 1)
 ```
+
+Get the shist
+=============
+
+`devtools::install_github("milesmcbain/ggmissing")`
