@@ -1,0 +1,11 @@
+Package: shist
+Title: Plot Hisograms Once
+Version: 0.0.0.9000
+Authors@R: person("Miles", "McBain", email = "miles.mcbain@gmail.com", role = c("aut", "cre"))
+Description: Shifting histograms - they're the shist. This package contains one funciton `shist()` that allows you to plot a histogram first and choose the bin widths later on the fly. Functionality is a thin wrapper around tools provided by the mighty hadley's `ggvis`. The point is it's fast, easy and kinda fun.
+Depends:
+    R (>= 3.2.3)
+License: MIT + file LICENSE
+LazyData: true
+RoxygenNote: 5.0.1
+Imports: ggvis, dplyr, magrittr, shiny
