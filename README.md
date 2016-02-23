@@ -16,4 +16,4 @@ shist(trees$Girth, bin_step = 1)
 Get the shist
 =============
 
-`devtools::install_github("milesmcbain/ggmissing")`
+`devtools::install_github("milesmcbain/shist")`
