@@ -3,4 +3,3 @@
 export(shist)
 import(dplyr)
 import(ggvis)
-import(magrittr)
