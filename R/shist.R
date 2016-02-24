@@ -25,7 +25,7 @@ shist <- function(x,
   NAs = is.na(x)
   if( length(NAs) > 0){
   x <- x[!NAs]
-  warning(paste0("shist ignored ", length(NAs), " NAs for you. Please come again."))
+  warning(paste0("shist ignored ", sum(NAs), " NAs for you. Please come again."))
   }
 
 
